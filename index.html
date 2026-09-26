@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nice Artes | Enxoval de bebê pintado à mão em São Mateus, ES</title>
+<meta name="description" content="Enxoval de bebê personalizado, pintado à mão em tecido e MDF por Elenice, em São Mateus, Espírito Santo. Peça o catálogo pelo WhatsApp.">
+<meta name="theme-color" content="#faf6f9">
+<meta property="og:title" content="Nice Artes, pintura à mão para o enxoval do bebê">
+<meta property="og:description" content="Cada peça pintada à mão, com o nome do seu bebê em letra de mão.">
+<!-- Ao publicar, troque por o endereço completo, ex.: https://seudominio.com.br/assets/jardim-iris.jpg -->
+<meta property="og:image" content="assets/jardim-iris.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%236a4fb6'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='white' font-family='cursive' font-style='italic'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="assets/jardim-iris.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Tokens. Um tema claro e aconchegante, um acento (violeta do kit lilás).
+   Raio: 20px para fotos e painéis, 12px para campos, pílula para o que se aperta. */
+:root{
+  --bg:#faf6f9; --tint:rgba(236,222,238,.55); --panel:#fffdfe;
+  --ink:#2b2340; --muted:#5f5677; --line:rgba(43,35,64,.14); --line2:rgba(43,35,64,.3);
+  --accent:#6a4fb6; --accent-soft:#e6dcf5;
+  --sans:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --script:"Allura","Snell Roundhand",cursive;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --r:20px;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{position:relative;font-family:var(--sans);font-size:1.0625rem;line-height:1.6;color:var(--ink);background:var(--bg);overflow-x:hidden;-webkit-font-smoothing:antialiased;accent-color:var(--accent);caret-color:var(--accent)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+::selection{background:var(--accent);color:#fff}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 36px);margin-inline:auto}
+main,footer{position:relative;z-index:1}
+section{padding:clamp(40px,5.6vw,76px) 0;position:relative}
+h1,h2,h3{font-weight:400;letter-spacing:-.035em;line-height:1.04;text-wrap:balance}
+h1{font-size:clamp(2.6rem,6.4vw,5.4rem)}
+h2{font-size:clamp(2rem,4.2vw,3.3rem)}
+h3{font-weight:500;letter-spacing:-.015em;line-height:1.25}
+.lead{color:var(--muted);font-size:1.1rem;max-width:32em;text-wrap:pretty}
+
+/* fundo artesanal: padrão bem sutil de motivos das próprias peças */
+.bgpat{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.11;color:var(--accent)}
+
+/* arabescos */
+.orn{color:var(--accent);pointer-events:none}
+.flo{display:block;width:min(260px,60%);height:auto;margin:0 auto;opacity:.6}
+.cn{position:absolute;width:64px;height:64px;opacity:.55}
+.cn.tl{top:8px;left:8px}.cn.tr{top:8px;right:8px;rotate:90deg}.cn.br{bottom:8px;right:8px;rotate:180deg}.cn.bl{bottom:8px;left:8px;rotate:270deg}
+@media(max-width:600px){.cn{width:44px;height:44px}}
+/* renda em ondinhas, como o bordado inglês das fraldas */
+.lace::before{content:"";position:absolute;left:0;right:0;top:-9px;height:10px;background:radial-gradient(circle at 10px 10px,var(--tint) 9px,transparent 9.5px) 0 0/20px 10px repeat-x}
+.tinted{background:var(--tint)}
+
+/* prévia */
+.demo{position:relative;z-index:2;background:var(--accent-soft);font-size:.85rem;color:var(--ink);text-align:center;padding:8px 20px;display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap}
+.demo button{background:none;border:0;text-decoration:underline;text-underline-offset:3px;font-size:.85rem;padding:6px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;font-size:.98rem;font-weight:500;padding:14px 28px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:#fff;transition:transform 160ms var(--ease),background-color 200ms var(--ease),border-color 200ms var(--ease),color 200ms var(--ease)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line2)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent);border-color:var(--accent)}
+  .btn.ghost:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;border-bottom:1px solid transparent;transition:background-color 240ms var(--ease),border-color 240ms var(--ease)}
+header.nav.solid{background:rgba(250,246,249,.93);border-color:var(--line);backdrop-filter:blur(14px)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand b{font-family:var(--script);font-weight:400;font-size:2.1rem;line-height:1;letter-spacing:0}
+.brand small{font-size:.8rem;color:var(--muted)}
+nav.links{display:flex;gap:4px;font-size:.97rem}
+nav.links a{padding:10px 16px;border-radius:999px;color:var(--muted);transition:color 200ms var(--ease),background-color 200ms var(--ease)}
+@media (hover:hover) and (pointer:fine){nav.links a:hover{color:var(--ink);background:var(--accent-soft)}}
+.nav .btn{padding:10px 24px}
+.burger{display:none;width:44px;height:44px;border-radius:999px;border:1px solid var(--line2);background:none;position:relative}
+.burger i{position:absolute;left:13px;right:13px;height:1.5px;background:var(--ink);transition:transform 240ms var(--ease),top 240ms var(--ease)}
+.burger i:first-child{top:18px}.burger i:last-child{top:25px}
+.burger[aria-expanded=true] i:first-child{top:21.5px;transform:rotate(45deg)}
+.burger[aria-expanded=true] i:last-child{top:21.5px;transform:rotate(-45deg)}
+@media(max-width:900px){
+  .burger{display:block}.nav>.wrap>.btn{display:none}.brand small{display:none}
+  nav.links{position:fixed;inset:64px 0 auto 0;background:var(--bg);flex-direction:column;gap:2px;padding:12px 20px 24px;border-bottom:1px solid var(--line);font-size:1.15rem;opacity:0;visibility:hidden;translate:0 -8px;transition:opacity 200ms var(--ease),translate 200ms var(--ease),visibility 200ms}
+  nav.links.on{opacity:1;visibility:visible;translate:0}
+  nav.links a{padding:14px 8px;color:var(--ink)}
+}
+
+/* photos */
+.frame{border-radius:var(--r);overflow:hidden;background:var(--tint)}
+.frame img{width:100%;height:100%;object-fit:cover}
+
+/* hero */
+.hero{padding-top:clamp(20px,3vw,40px);padding-bottom:clamp(36px,4.6vw,60px)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,64px);align-items:center;min-height:min(560px,calc(100dvh - 130px))}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{margin-bottom:18px}
+.mao{position:relative;display:inline-block;white-space:nowrap}
+.mao svg{position:absolute;left:-2%;bottom:-.12em;width:104%;height:.3em;overflow:visible}
+.mao path{fill:none;stroke:var(--accent);stroke-width:5;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0}
+.hero .lead{margin-bottom:26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-art{position:relative;padding:0 0 10% 12%;max-width:470px;justify-self:center;width:100%}
+.hero-art .cn{width:84px;height:84px;top:-14px;right:-16px;z-index:2;opacity:.7}
+.h-main{aspect-ratio:4/5;width:100%}
+.h-sub{position:absolute;left:0;bottom:0;width:38%;aspect-ratio:1;border:6px solid var(--bg)}
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;min-height:0}
+  .hero-art{max-width:400px;justify-self:start}
+}
+@keyframes rise{from{opacity:0;translate:0 14px}}
+@keyframes wipe{from{clip-path:inset(0 100% 0 0)}}
+@keyframes draw{from{stroke-dashoffset:1}}
+@media (prefers-reduced-motion:no-preference){
+  .hero-in>*{animation:rise 640ms var(--ease) both;animation-delay:calc(var(--i,0)*70ms + 60ms)}
+  .h-main{animation:wipe 1100ms cubic-bezier(.77,0,.175,1) 150ms both}
+  .h-sub{animation:rise 800ms var(--ease) 700ms both}
+  .mao path{animation:draw 900ms var(--ease) 700ms both}
+}
+
+/* carrossel: cartões quadrados, todos do mesmo tamanho */
+.pieces{padding-top:clamp(24px,3.4vw,44px)}
+.p-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.p-head h2{margin-bottom:6px}
+.arrows{display:flex;gap:8px}
+.arr{width:48px;height:48px;border-radius:999px;border:1px solid var(--line2);background:var(--panel);position:relative;transition:transform 160ms var(--ease),background-color 200ms var(--ease),opacity 200ms var(--ease)}
+.arr:active{transform:scale(.94)}
+.arr::before{content:"";position:absolute;left:50%;top:50%;width:11px;height:11px;border-top:1.6px solid var(--ink);border-right:1.6px solid var(--ink);translate:-65% -50%;rotate:45deg}
+.arr.prev::before{rotate:-135deg;translate:-35% -50%}
+.arr[disabled]{opacity:.35;cursor:default}
+@media (hover:hover) and (pointer:fine){.arr:not([disabled]):hover{background:var(--accent-soft)}}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px max(18px,calc((100vw - 1120px)/2)) 18px;scroll-padding-inline:max(18px,calc((100vw - 1120px)/2));scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.slide{flex:none;width:min(300px,74vw);scroll-snap-align:start}
+.open{display:block;width:100%;padding:0;border:0;background:none;text-align:left;border-radius:var(--r);cursor:zoom-in}
+.slide .frame{aspect-ratio:1;margin-bottom:10px;box-shadow:0 10px 24px -16px rgba(43,35,64,.45);transition:translate 300ms var(--ease),box-shadow 300ms var(--ease)}
+@media (hover:hover) and (pointer:fine){.open:hover .frame{translate:0 -4px;box-shadow:0 18px 30px -16px rgba(43,35,64,.5)}}
+.slide h3{font-size:1.1rem}
+.slide p{color:var(--muted);font-size:.92rem;line-height:1.4}
+.slide .pr{color:var(--ink);margin-top:2px}
+.slide.det .frame{background-image:var(--img);background-repeat:no-repeat;background-size:calc(var(--z) * 100%);
+  background-position:calc((var(--fx) * var(--z) - .5) / (var(--z) - 1) * 100%) calc((var(--fy) * var(--z) - .5) / (var(--z) - 1) * 100%);cursor:default}
+.dots{display:flex;gap:2px;justify-content:center;margin-top:2px}
+.dots button{width:30px;height:30px;border:0;background:none;position:relative;padding:0}
+.dots button::after{content:"";position:absolute;left:9px;right:9px;top:13px;height:4px;border-radius:2px;background:var(--line2);transition:background-color 240ms var(--ease),left 240ms var(--ease),right 240ms var(--ease)}
+.dots button[aria-current=true]::after{background:var(--accent);left:3px;right:3px}
+.mdf{margin-top:14px;display:flex;gap:18px;align-items:center;max-width:640px}
+.mdf .slot{flex:none;width:96px;aspect-ratio:1;border-radius:var(--r);border:1.5px dashed var(--line2);display:grid;place-items:center;text-align:center;font-size:.75rem;color:var(--muted);padding:8px}
+.mdf h3{font-size:1.15rem;margin-bottom:2px}
+.mdf p{color:var(--muted);font-size:.97rem}
+
+/* lightbox */
+dialog.lb{border:0;background:transparent;padding:0;max-width:none;max-height:none;width:100%;height:100%;margin:0;overflow:hidden}
+dialog.lb::backdrop{background:rgba(31,24,48,.86);backdrop-filter:blur(6px)}
+.lb-in{width:100%;height:100%;display:grid;place-items:center;align-content:center;gap:16px;padding:20px}
+.lb img{max-height:72dvh;max-width:min(92vw,720px);width:auto;height:auto;object-fit:cover;object-position:center bottom;border-radius:var(--r);animation:zoom 260ms var(--ease)}
+.lb-bar{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center;max-width:min(92vw,720px)}
+.lb-bar p{color:#fff;flex-basis:100%;text-align:center;font-size:.98rem}
+.lb-bar .btn.ghost{background:var(--panel);color:var(--ink)}
+@keyframes zoom{from{opacity:0;scale:.96}}
+
+/* nome sobre tecido real */
+.nome .head{max-width:34em;margin-bottom:22px}
+.nome h2{margin-bottom:8px}
+.board{border-radius:var(--r);border:1px solid var(--line);padding:clamp(26px,4.4vw,52px) clamp(28px,5vw,64px);position:relative;overflow:hidden;
+  background-image:linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,.35)),url(assets/fralda-ombro.jpg);background-size:cover;background-position:center 46%}
+.board output{display:block;text-align:center;font-family:var(--script);line-height:1.15;padding:.1em .1em .18em;min-height:1.3em;white-space:nowrap;transition:color 220ms var(--ease),filter 220ms var(--ease)}
+.board output.swap{filter:blur(2px)}
+.board .sig{position:absolute;right:76px;bottom:10px;font-family:var(--script);font-size:1.4rem;color:var(--muted)}
+.ctl{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:end;margin-top:18px}
+.ctl label{display:block;font-size:.9rem;color:var(--muted);margin-bottom:6px}
+.ctl input{background:var(--panel);border:1px solid var(--line2);border-radius:12px;color:var(--ink);padding:12px 16px;font:inherit;font-size:1.05rem;min-height:48px;width:min(300px,100%)}
+.ctl input::placeholder{color:#6b6285}
+.inks{display:flex;gap:8px;flex-wrap:wrap}
+.ink{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line2);background:var(--panel);border-radius:999px;padding:0 20px 0 14px;min-height:48px;font-size:.98rem;transition:transform 160ms var(--ease),border-color 200ms var(--ease),background-color 200ms var(--ease)}
+.ink:active{transform:scale(.97)}
+.ink i{width:20px;height:20px;border-radius:50%;background:var(--c)}
+.ink[aria-pressed=true]{border-color:var(--ink);background:var(--accent-soft)}
+.ctl .btn{margin-left:auto}
+@media(max-width:760px){.ctl .btn{margin-left:0;width:100%}}
+
+/* como encomendar: passos em linha */
+.how h2{margin-bottom:20px}
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0 clamp(16px,2.4vw,32px)}
+.st{padding-top:14px;border-top:1.5px solid var(--line2)}
+.st h3{font-size:1.25rem;margin-bottom:4px}
+.st p{color:var(--muted);font-size:.97rem;line-height:1.5}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr;gap:22px 20px}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.facts{margin-top:26px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px clamp(16px,2.4vw,32px);padding:18px 22px;border-radius:var(--r);background:var(--panel);border:1px solid var(--line)}
+.facts h3{font-size:.85rem;color:var(--muted);font-weight:400;letter-spacing:0;margin-bottom:2px}
+.facts p{font-size:.98rem;line-height:1.4}
+@media(max-width:860px){.facts{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.facts{grid-template-columns:1fr}}
+
+/* depoimentos */
+.fb h2{margin-bottom:20px}
+.fbgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.fbslot{border:1.5px dashed var(--line2);border-radius:var(--r);padding:20px;min-height:110px;color:var(--muted);font-size:.93rem;display:grid;align-content:center}
+.fbcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.fbcard p{font-size:1.1rem;line-height:1.45;text-wrap:pretty}
+.fbcard cite{display:block;margin-top:12px;font-style:normal;color:var(--muted);font-size:.95rem}
+
+/* história */
+.story .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,64px);align-items:center}
+@media(max-width:860px){.story .wrap{grid-template-columns:1fr}}
+.quote{font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.12;font-weight:400;letter-spacing:-.03em;max-width:16em;text-wrap:balance}
+.by{margin:10px 0 18px;color:var(--muted)}
+.tale{color:var(--muted)}
+.tale p{max-width:34em;text-wrap:pretty}
+.tale p + p{margin-top:12px}
+.feira .frame{aspect-ratio:5/4}
+.feira img{object-position:center 42%}
+.feira figcaption{margin-top:10px;color:var(--muted);font-size:.93rem}
+
+/* final */
+.final{padding-bottom:clamp(36px,4.6vw,56px)}
+.final .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:22px}
+.final h2{max-width:11em}
+.final p{color:var(--muted);margin-top:10px;max-width:28em}
+.final .cta{flex:none}
+footer{padding:24px 0 96px;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{text-decoration:underline;text-underline-offset:3px}
+
+/* dock */
+.dock{position:fixed;z-index:40;right:20px;bottom:20px;background:var(--ink);color:#fff;border-radius:999px;padding:14px 28px;font-weight:500;font-size:.98rem;box-shadow:0 14px 30px -12px rgba(43,35,64,.5);opacity:0;translate:0 16px;pointer-events:none;transition:opacity 240ms var(--ease),translate 240ms var(--ease),transform 160ms var(--ease)}
+.dock.on{opacity:1;translate:0;pointer-events:auto}
+.dock:active{transform:scale(.97)}
+@media(max-width:640px){.dock{left:14px;right:14px;bottom:14px;text-align:center}}
+
+/* ===== detalhes que chamam atenção com delicadeza ===== */
+
+/* arabescos que se desenham sozinhos */
+.js .orn use{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1500ms cubic-bezier(.65,0,.35,1)}
+.js .orn.in use{stroke-dashoffset:0}
+.flo.sm{width:120px;margin:10px 0 0;opacity:.6}
+
+/* títulos: palavra por palavra, saindo de um leve desfoque */
+.js .rv.wsplit{opacity:1;translate:0}
+.js .wsplit .w{display:inline-block;opacity:0;translate:0 .45em;filter:blur(5px);transition:opacity 620ms var(--ease),translate 620ms var(--ease),filter 620ms var(--ease);transition-delay:calc(var(--w) * 45ms)}
+.js .wsplit.in .w{opacity:1;translate:0;filter:none}
+
+/* borboleta que chega e pousa na foto, como as pintadas nas fraldas */
+.bfly{position:absolute;left:0;top:0;width:44px;height:44px;z-index:3;pointer-events:none;offset-path:path("M -150 250 C -80 60 40 200 82 34");offset-rotate:auto 90deg;offset-distance:100%;opacity:0}
+.bfly svg{width:100%;height:100%;overflow:visible}
+.bfly .wl,.bfly .wr{transform-box:fill-box;transform-origin:right center;fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.4;stroke-linejoin:round}
+.bfly .wr{transform-origin:left center}
+.bfly .bd{stroke:var(--accent);stroke-width:1.6;stroke-linecap:round}
+@keyframes fly{0%{offset-distance:0%;opacity:0}10%{opacity:1}100%{offset-distance:100%;opacity:1}}
+@keyframes flap{50%{transform:scaleX(.28)}}
+@keyframes rest{50%{transform:scaleX(.78)}}
+@media (prefers-reduced-motion:no-preference){
+  .bfly{animation:fly 4200ms cubic-bezier(.45,.05,.25,1) 900ms both}
+  .bfly .wl,.bfly .wr{animation:flap 240ms ease-in-out 900ms 17 both,rest 2600ms ease-in-out 5100ms infinite}
+}
+@media (prefers-reduced-motion:reduce){.bfly{opacity:1}}
+
+/* pétalas leves subindo no início da página */
+.petals{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.pt{position:absolute;bottom:-30px;left:var(--x);width:var(--s);height:var(--s);color:var(--accent);opacity:0}
+.pt svg{width:100%;height:100%;display:block}
+@keyframes drift{0%{translate:0 0;rotate:0deg;opacity:0}12%{opacity:.34}88%{opacity:.34}100%{translate:var(--dx) -560px;rotate:var(--rot);opacity:0}}
+@media (prefers-reduced-motion:no-preference){
+  .pt{animation:drift var(--d) linear var(--dl) infinite}
+  .hero.away .pt{animation-play-state:paused}
+}
+@media (prefers-reduced-motion:reduce){.petals{display:none}}
+
+/* profundidade suave nas fotos do topo (só com mouse) */
+.h-main{transform:translate(var(--tx,0px),var(--ty,0px))}
+.h-sub{transform:translate(calc(var(--tx,0px) * -1.8),calc(var(--ty,0px) * -1.8))}
+
+/* carrossel: entrada em cascata e cartão em foco ao passar pelo centro */
+.js .rail:not(.in) .slide{opacity:0;translate:0 14px;scale:.98}
+.rail .slide{transition:opacity 520ms var(--ease),translate 520ms var(--ease),scale 520ms var(--ease);transition-delay:calc(var(--i) * 55ms)}
+@keyframes focus{0%{scale:.93;opacity:.72}50%{scale:1;opacity:1}100%{scale:.93;opacity:.72}}
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .slide .frame{animation:focus linear both;animation-timeline:view(inline);animation-range:entry 0% exit 100%}
+  }
+}
+
+/* nome que "escreve" e letras que penetram no tecido */
+@keyframes write{from{clip-path:inset(-30% 100% -30% -5%)}to{clip-path:inset(-30% -5% -30% -5%)}}
+@keyframes soak{from{opacity:0;filter:blur(4px)}}
+@media (prefers-reduced-motion:no-preference){
+  .board output.write{animation:write 1700ms cubic-bezier(.65,0,.35,1) both}
+  .board output .pop{animation:soak 340ms var(--ease) both}
+}
+
+/* revelar: só títulos e fotos; o conteúdo fica visível se o JS não rodar */
+.js .rv{opacity:0;translate:0 16px;transition:opacity 520ms var(--ease),translate 520ms var(--ease)}
+.js .rv.in{opacity:1;translate:0}
+.js .unveil{clip-path:inset(0 0 100% 0);transition:clip-path 1000ms cubic-bezier(.77,0,.175,1)}
+.js .unveil.in{clip-path:inset(0 0 0 0)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .js .rv{opacity:1;translate:0}.js .unveil{clip-path:none}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- Ornamentos reutilizáveis: arabescos delicados e motivos das peças -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="halfF" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path pathLength="1" d="M112 14C106 14 104 6 97 6C90 6 88 13 93 16C97 18 101 15 99 12"/>
+      <path pathLength="1" d="M97 6C82 6 74 18 57 18C44 18 36 10 22 12C14 13 8 16 3 14"/>
+      <path pathLength="1" d="M57 18C59 10 67 8 73 10"/>
+      <path pathLength="1" d="M40 13C42 6 50 4 55 7"/>
+      <path pathLength="1" d="M22 12C22 20 16 23 11 22"/>
+    </g>
+    <symbol id="flourish" viewBox="0 0 240 28">
+      <use href="#halfF"/><use href="#halfF" transform="translate(240 0) scale(-1 1)"/>
+      <circle pathLength="1" cx="120" cy="14" r="3" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    </symbol>
+    <symbol id="corner" viewBox="0 0 80 80">
+      <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <path pathLength="1" d="M4 76C4 40 24 16 76 4"/>
+        <path pathLength="1" d="M4 76C22 70 30 58 28 46C27 38 20 36 18 42C17 47 22 49 24 45"/>
+        <path pathLength="1" d="M30 30C36 24 46 24 48 30C44 34 36 34 30 30Z"/>
+        <path pathLength="1" d="M14 56C10 50 12 42 18 40"/>
+        <circle pathLength="1" cx="62" cy="10" r="2"/>
+      </g>
+    </symbol>
+    <symbol id="daisy" viewBox="-14 -14 28 28"><g fill="currentColor"><ellipse cy="-8" rx="3.4" ry="6"/><ellipse cy="-8" rx="3.4" ry="6" transform="rotate(60)"/><ellipse cy="-8" rx="3.4" ry="6" transform="rotate(120)"/><ellipse cy="-8" rx="3.4" ry="6" transform="rotate(180)"/><ellipse cy="-8" rx="3.4" ry="6" transform="rotate(240)"/><ellipse cy="-8" rx="3.4" ry="6" transform="rotate(300)"/></g><circle r="2.6" fill="#fff"/></symbol>
+    <pattern id="craft" width="360" height="360" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(70 78)">
+          <circle r="3"/>
+          <ellipse cy="-10" rx="3.2" ry="7"/><ellipse cy="-10" rx="3.2" ry="7" transform="rotate(45)"/><ellipse cy="-10" rx="3.2" ry="7" transform="rotate(90)"/><ellipse cy="-10" rx="3.2" ry="7" transform="rotate(135)"/>
+          <ellipse cy="-10" rx="3.2" ry="7" transform="rotate(180)"/><ellipse cy="-10" rx="3.2" ry="7" transform="rotate(225)"/><ellipse cy="-10" rx="3.2" ry="7" transform="rotate(270)"/><ellipse cy="-10" rx="3.2" ry="7" transform="rotate(315)"/>
+        </g>
+        <g transform="translate(262 64) rotate(-18)">
+          <path pathLength="1" d="M0 0C-12-16-30-8-22 6C-18 14-6 10 0 0C6 10 18 14 22 6C30-8 12-16 0 0Z"/>
+          <path pathLength="1" d="M0 0L-4-12M0 0L5-11"/>
+        </g>
+        <g transform="translate(298 262) rotate(22)">
+          <path pathLength="1" d="M0 0C7-30 7-60 0-90"/>
+          <path pathLength="1" d="M1-20C12-24 18-32 16-38C8-36 2-28 1-20Z"/><path pathLength="1" d="M0-40C-12-44-18-52-16-58C-8-56-2-48 0-40Z"/><path pathLength="1" d="M1-60C12-64 18-72 16-78C8-76 2-68 1-60Z"/>
+        </g>
+        <g transform="translate(120 268)"><path pathLength="1" d="M0 7C-11-4-7-13 0-6C7-13 11-4 0 7Z"/></g>
+        <g transform="translate(188 176)"><circle r="1.4"/><circle cx="14" cy="6" r="1.4"/><circle cx="-12" cy="10" r="1.4"/><circle cx="4" cy="-13" r="1.4"/></g>
+        <g transform="translate(24 200) rotate(-40)">
+          <path pathLength="1" d="M0 0C6-24 6-48 0-70"/>
+          <path pathLength="1" d="M1-16C10-20 15-27 13-32C6-30 2-23 1-16Z"/><path pathLength="1" d="M0-34C-10-38-15-45-13-50C-6-48-2-41 0-34Z"/>
+        </g>
+      </g>
+    </pattern>
+  </defs>
+</svg>
+
+<svg class="bgpat" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#craft)"/></svg>
+
+<div class="demo" id="demo"><span>Prévia do site: valores, prazos e espaços de depoimento são exemplos e serão trocados pelos dados reais.</span><button id="demoX" type="button">Fechar aviso</button></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Nice Artes, início"><b>Nice Artes</b><small>pintura à mão</small></a>
+    <nav class="links" id="links" aria-label="Menu principal">
+      <a href="#pecas">Peças</a><a href="#nome">Seu nome</a><a href="#encomendar">Como encomendar</a><a href="#historia">História</a>
+    </nav>
+    <a class="btn wa" href="#" data-msg="Olá, Elenice! Vim pelo site e gostaria de encomendar uma peça.">Encomendar</a>
+    <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="links"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" id="hero">
+  <div class="petals" aria-hidden="true">
+    <span class="pt" style="--x:6%;--s:18px;--d:21s;--dl:-4s;--dx:46px;--rot:200deg"><svg><use href="#daisy"/></svg></span>
+    <span class="pt" style="--x:22%;--s:13px;--d:17s;--dl:-11s;--dx:-34px;--rot:-160deg"><svg><use href="#daisy"/></svg></span>
+    <span class="pt" style="--x:41%;--s:20px;--d:24s;--dl:-8s;--dx:52px;--rot:240deg"><svg><use href="#daisy"/></svg></span>
+    <span class="pt" style="--x:58%;--s:14px;--d:19s;--dl:-2s;--dx:-40px;--rot:-210deg"><svg><use href="#daisy"/></svg></span>
+    <span class="pt" style="--x:76%;--s:17px;--d:23s;--dl:-14s;--dx:38px;--rot:180deg"><svg><use href="#daisy"/></svg></span>
+    <span class="pt" style="--x:92%;--s:12px;--d:18s;--dl:-6s;--dx:-30px;--rot:-190deg"><svg><use href="#daisy"/></svg></span>
+  </div>
+  <div class="wrap">
+    <div class="hero-in">
+      <h1 style="--i:0">Cada peça, pintada <span class="mao">à mão.<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 8 C 40 2, 78 11, 118 5 S 176 8, 197 4"/></svg></span></h1>
+      <p class="lead" style="--i:1">Enxoval de bebê personalizado, pintado com carinho em tecido e MDF. Atendimento e orçamento pelo WhatsApp.</p>
+      <div class="cta" style="--i:2">
+        <a class="btn wa" href="#" data-msg="Olá, Elenice! Vim pelo site e gostaria de encomendar uma peça.">Encomendar</a>
+        <a class="btn ghost" href="#pecas">Ver peças</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg class="cn orn" aria-hidden="true"><use href="#corner"/></svg>
+      <div class="bfly" aria-hidden="true"><svg viewBox="-30 -22 60 44"><g class="wl"><path d="M0 0C-8-16-28-14-24 2C-22 10-8 10 0 0Z"/><path d="M0 2C-6 12-16 18-20 12C-18 6-8 4 0 2Z"/></g><g class="wr"><path d="M0 0C8-16 28-14 24 2C22 10 8 10 0 0Z"/><path d="M0 2C6 12 16 18 20 12C18 6 8 4 0 2Z"/></g><path class="bd" d="M0-9L0 12M0-9C-2-14-5-16-7-15M0-9C2-14 5-16 7-15"/></svg></div>
+      <div class="frame h-main"><img src="assets/jardim-iris.jpg" width="1200" height="1599" fetchpriority="high" decoding="async" alt="Fraldas de tecido com jardim de flores silvestres pintado à mão e barra de renda lilás"></div>
+      <div class="frame h-sub"><img src="assets/elenice-pintando.jpg" width="1200" height="1200" decoding="async" alt="Elenice sorrindo enquanto pinta uma peça, com as tintas na prateleira ao fundo"></div>
+    </div>
+  </div>
+</section>
+
+<section class="pieces tinted lace" id="pecas">
+  <div class="wrap p-head">
+    <div>
+      <h2 class="rv">Peças feitas uma a uma.</h2>
+      <svg class="flo sm orn" viewBox="0 0 240 28" aria-hidden="true"><use href="#flourish"/></svg>
+      <p class="lead rv">Bordado inglês, fitas e rendas escolhidos para combinar. Toque numa peça para ampliar.</p>
+    </div>
+    <div class="arrows"><button class="arr prev" id="prev" type="button" aria-label="Peça anterior"></button><button class="arr next" id="next" type="button" aria-label="Próxima peça"></button></div>
+  </div>
+  <div class="rail" id="rail" tabindex="0" role="region" aria-label="Carrossel de peças">
+    <article class="slide pc" data-title="Leãozinho" data-price="Conjunto de banho a partir de R$ 149" data-src="assets/leao-azul.jpg" data-alt="Conjunto de banho com leãozinho pintado à mão, nome em letra de mão e barra de renda"><button class="open" type="button" aria-label="Ampliar: Leãozinho"><div class="frame"><img src="assets/leao-azul.jpg" width="1200" height="1600" alt="Conjunto de banho com leãozinho pintado à mão sobre madeira" style="object-position:center 62%" decoding="async"></div></button><h3>Leãozinho</h3><p>Fralda de boca, toalha e fralda de ombro</p><p class="pr">Conjunto a partir de R$ 149</p></article>
+    <article class="slide pc" data-title="Ursinha e amigos" data-price="Fralda de ombro a partir de R$ 45" data-src="assets/fralda-ombro.jpg" data-alt="Fralda de ombro com ursinha, ovelhinha e elefantinho pintados em um gramado" data-crop="1"><button class="open" type="button" aria-label="Ampliar: Ursinha e amigos"><div class="frame"><img src="assets/fralda-ombro.jpg" width="1200" height="1594" alt="Fralda de ombro com ursinha, ovelhinha e elefantinho pintados à mão" style="object-position:center bottom" loading="lazy" decoding="async"></div></button><h3>Ursinha e amigos</h3><p>Fralda de ombro com barra colorida</p><p class="pr">A partir de R$ 45</p></article>
+    <article class="slide pc" data-title="Rosas vermelhas" data-price="Toalha pintada a partir de R$ 79" data-src="assets/ele-ela.jpg" data-alt="Toalhas com rosas vermelhas pintadas à mão, fita de cetim e renda"><button class="open" type="button" aria-label="Ampliar: Rosas vermelhas"><div class="frame"><img src="assets/ele-ela.jpg" width="1200" height="1600" alt="Barras de toalha com rosas vermelhas pintadas à mão, fita de cetim e renda" style="object-position:center 72%" loading="lazy" decoding="async"></div></button><h3>Rosas vermelhas</h3><p>Toalhas para presente, com monograma</p><p class="pr">A partir de R$ 79</p></article>
+    <article class="slide pc" data-title="Ovelhinhas" data-price="Kit de 3 fraldas a partir de R$ 129" data-src="assets/kit-bebe.jpg" data-alt="Três fraldas com ovelhinhas pintadas, laço rosa e renda"><button class="open" type="button" aria-label="Ampliar: Ovelhinhas"><div class="frame"><img src="assets/kit-bebe.jpg" width="1200" height="1599" alt="Três fraldas com ovelhinhas de laço rosa pintadas à mão sobre um cesto de palha" style="object-position:center 55%" loading="lazy" decoding="async"></div></button><h3>Ovelhinhas</h3><p>Kit de três fraldas com renda rosa</p><p class="pr">Kit a partir de R$ 129</p></article>
+    <article class="slide pc" data-title="Ursinhas na cerquinha" data-price="Fralda pintada a partir de R$ 49" data-src="assets/fralda-dupla.jpg" data-alt="Fralda com dois ursinhos, cerquinha e arco de rosas pintados à mão" data-crop="1"><button class="open" type="button" aria-label="Ampliar: Ursinhas na cerquinha"><div class="frame"><img src="assets/fralda-dupla.jpg" width="1200" height="1600" alt="Fralda com dois ursinhos, cerquinha e arco de rosas pintados à mão, com barra floral" style="object-position:center 72%" loading="lazy" decoding="async"></div></button><h3>Ursinhas na cerquinha</h3><p>Pintura com rosas e placa com o nome</p><p class="pr">A partir de R$ 49</p></article>
+    <article class="slide det"><div class="frame" role="img" aria-label="Detalhe de uma rosa vermelha pintada à mão" style="--img:url(assets/ele-ela.jpg);--z:2.6;--fx:.33;--fy:.77"></div><h3>Rosas em camadas</h3><p>O traço de perto</p></article>
+    <article class="slide det"><div class="frame" role="img" aria-label="Detalhe do rosto de uma ursinha pintada à mão" style="--img:url(assets/fralda-ombro.jpg);--z:3.2;--fx:.49;--fy:.7"></div><h3>O olhar da ursinha</h3><p>O traço de perto</p></article>
+    <article class="slide det"><div class="frame" role="img" aria-label="Detalhe da assinatura Nice pintada no tecido" style="--img:url(assets/fralda-ombro.jpg);--z:4.4;--fx:.78;--fy:.84"></div><h3>A assinatura Nice</h3><p>Em cada peça</p></article>
+  </div>
+  <div class="wrap">
+    <div class="dots" id="dots" aria-label="Escolher peça"></div>
+    <div class="mdf">
+      <div class="slot" id="mdfSlot" hidden>Foto do kit em MDF</div>
+      <div><h3>Kit higiene em MDF</h3><p>Caixinhas e porta-objetos de MDF, pintados à mão para combinar com o enxoval. A partir de R$ 99.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="nome" id="nome">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="rv">Seu nome, em letra de mão.</h2>
+      <svg class="flo sm orn" viewBox="0 0 240 28" aria-hidden="true"><use href="#flourish"/></svg>
+      <p class="lead rv">Escreva o nome do bebê e escolha a cor da tinta para ver como fica no tecido. É uma prévia, o traço final é feito à mão.</p>
+    </div>
+    <div class="board rv">
+      <svg class="cn tl orn" aria-hidden="true"><use href="#corner"/></svg><svg class="cn tr orn" aria-hidden="true"><use href="#corner"/></svg><svg class="cn br orn" aria-hidden="true"><use href="#corner"/></svg><svg class="cn bl orn" aria-hidden="true"><use href="#corner"/></svg>
+      <output id="prev-name" for="nm" aria-live="polite">Helena</output>
+      <span class="sig" aria-hidden="true">Nice</span>
+    </div>
+    <div class="ctl">
+      <div><label for="nm">Nome do bebê</label><input id="nm" maxlength="24" placeholder="Digite o nome" autocomplete="off" value="Helena"></div>
+      <div><label id="inkL">Cor da tinta</label>
+        <div class="inks" role="group" aria-labelledby="inkL">
+          <button class="ink" type="button" style="--c:#d0587a" data-c="#d0587a" aria-pressed="true"><i></i>Rosa</button>
+          <button class="ink" type="button" style="--c:#6a4fb6" data-c="#6a4fb6" aria-pressed="false"><i></i>Lilás</button>
+          <button class="ink" type="button" style="--c:#1d1830" data-c="#1d1830" aria-pressed="false"><i></i>Preto</button>
+        </div>
+      </div>
+      <a class="btn wa" id="nameSend" href="#">Pedir com este nome</a>
+    </div>
+  </div>
+</section>
+
+<section class="how tinted lace" id="encomendar">
+  <div class="wrap">
+    <h2 class="rv">Como encomendar.</h2>
+    <svg class="flo sm orn" viewBox="0 0 240 28" aria-hidden="true" style="margin-bottom:18px"><use href="#flourish"/></svg>
+    <ol class="steps">
+      <li class="st"><h3>Chame no WhatsApp</h3><p>Atendimento e orçamento personalizados, por lá.</p></li>
+      <li class="st"><h3>Receba o catálogo</h3><p>Elenice envia as pinturas para você escolher.</p></li>
+      <li class="st"><h3>Combine os detalhes</h3><p>Nome, cores, rendas e fitas, antes de pintar.</p></li>
+      <li class="st"><h3>Receba em casa</h3><p>A peça é pintada à mão e enviada para você.</p></li>
+    </ol>
+    <div class="facts">
+      <div><h3>Prazo de produção</h3><p>De 10 a 15 dias, combinado na conversa.</p></div>
+      <div><h3>Pagamento</h3><p>Aceitamos cartão.</p></div>
+      <div><h3>Envio</h3><p>Fazemos envio, com frete combinado no WhatsApp.</p></div>
+      <div><h3>Valores</h3><p>Preços a partir de. O final depende da pintura.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="fb" id="feedback" hidden>
+  <div class="wrap">
+    <h2 class="rv">Quem já recebeu.</h2>
+    <div class="fbgrid" id="fbgrid"></div>
+  </div>
+</section>
+
+<section class="story" id="historia">
+  <div class="wrap">
+    <div>
+      <h2 class="quote rv">Ser artesã é transformar sonhos em realidade.</h2>
+      <p class="by">Elenice, Nice Artes</p>
+      <div class="tale">
+        <p>O artesanato chegou cedo: primeiro o crochê, ensinado pela mãe, depois o ponto cruz e o vagonite. Aos 20 anos, a pintura entrou na vida da Elenice, num curso de dois meses. Ela nunca mais parou.</p>
+        <p>Pintou as fraldinhas da própria filha. Quando a irmã soube que seria avó, pediu as fraldas dela. Assim nasceu a Nice Artes.</p>
+        <p>Hoje, além das fraldas, faz kits higiene em MDF, todos pintados à mão, e continua pintando toalhas de banho. Artesã desde 2000, com foco em maternidade.</p>
+      </div>
+    </div>
+    <figure class="feira">
+      <div class="frame unveil"><img src="assets/stand-feira.jpg" width="1200" height="1200" alt="Elenice sorrindo em seu estande de feira, com fraldas e toalhas pintadas sobre a mesa" loading="lazy" decoding="async"></div>
+      <figcaption>Elenice no estande da Nice Artes, em feira de São Mateus.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="final">
+  <svg class="flo orn" aria-hidden="true" viewBox="0 0 240 28"><use href="#flourish"/></svg>
+  <div class="wrap">
+    <div>
+      <h2 class="rv">Vamos pintar a próxima peça?</h2>
+      <p>Chame no WhatsApp, receba o catálogo e escolha a pintura do enxoval.</p>
+    </div>
+    <div class="cta">
+      <a class="btn wa" href="#" data-msg="Olá, Elenice! Vim pelo site e gostaria de encomendar uma peça.">Encomendar</a>
+      <a class="btn ghost" id="cat" href="#" target="_blank" rel="noopener">Ver catálogo</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Nice Artes, São Mateus, Espírito Santo</span>
+    <span><a href="https://www.instagram.com/niceartes4" target="_blank" rel="noopener">@niceartes4</a> <span id="yr"></span></span>
+  </div>
+</footer>
+
+<a class="dock" id="dock" href="#">Encomendar</a>
+
+<dialog class="lb" id="lb" aria-label="Foto ampliada">
+  <div class="lb-in" id="lbIn">
+    <img alt="">
+    <div class="lb-bar">
+      <p id="lbT"></p>
+      <a class="btn" id="lbWa" href="#" target="_blank" rel="noopener">Quero uma assim</a>
+      <button class="btn ghost" type="button" id="lbX">Fechar</button>
+    </div>
+  </div>
+</dialog>
+
+<noscript><p style="padding:20px;text-align:center">Para encomendar, fale com a Elenice pelo WhatsApp: +55 27 99959-3025.</p></noscript>
+
+<script>
+/* DADOS. Reais: WhatsApp, catálogo, história e fotos (Instagram @niceartes4 e bio.site/niceartes4).
+   EXEMPLO (trocar): preços, prazo, frete e o kit em MDF. Depoimentos: preencher com prints reais. */
+const CONFIG = {
+  demo: true,                                    // false remove a faixa de prévia e os espaços marcados
+  whatsapp: '5527999593025',
+  catalog: 'https://wa.me/c/5527999593025',
+  mdfPhoto: '',                                  // ex.: 'assets/mdf.jpg'
+  feedbacks: [                                   // ex.: {text:'...', who:'Nome, cidade'} (somente depoimentos reais)
+  ]
+};
+const $ = s => document.querySelector(s);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const wa = m => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(m)}`;
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+document.querySelectorAll('.wa').forEach(a => { if (a.dataset.msg) { a.href = wa(a.dataset.msg); a.target = '_blank'; a.rel = 'noopener'; } });
+$('#nameSend').target = '_blank'; $('#nameSend').rel = 'noopener';
+$('#dock').href = wa('Olá, Elenice! Vim pelo site e gostaria de encomendar uma peça.'); $('#dock').target = '_blank'; $('#dock').rel = 'noopener';
+$('#cat').href = CONFIG.catalog;
+$('#yr').textContent = '© ' + new Date().getFullYear();
+
+/* faixa de prévia, kit em MDF e depoimentos */
+if (!CONFIG.demo) $('#demo').remove(); else $('#demoX').addEventListener('click', () => $('#demo').remove());
+if (CONFIG.mdfPhoto) { const s = $('#mdfSlot'); s.hidden = false; s.style.padding = '0'; s.style.border = '0'; s.innerHTML = `<img src="${CONFIG.mdfPhoto}" alt="Kit higiene em MDF pintado à mão" style="border-radius:20px;width:100%;height:100%;object-fit:cover">`; }
+else if (CONFIG.demo) $('#mdfSlot').hidden = false;
+if (CONFIG.feedbacks.length) {
+  $('#fbgrid').innerHTML = CONFIG.feedbacks.map(f => `<figure class="fbcard"><p>“${esc(f.text)}”</p><cite>${esc(f.who)}</cite></figure>`).join('');
+  $('#feedback').hidden = false;
+} else if (CONFIG.demo) {
+  $('#fbgrid').innerHTML = [1,2,3].map(() => '<div class="fbslot">Espaço para um depoimento real, com print do destaque Feedback do Instagram.</div>').join('');
+  $('#feedback').hidden = false;
+}
+
+/* menu */
+const nav = $('#nav'), links = $('#links'), burger = $('#burger');
+new IntersectionObserver(([e]) => nav.classList.toggle('solid', !e.isIntersecting), {rootMargin:'-40px 0px 0px 0px'}).observe($('#hero'));
+const setMenu = on => { links.classList.toggle('on', on); burger.setAttribute('aria-expanded', on); burger.setAttribute('aria-label', on ? 'Fechar menu' : 'Abrir menu'); };
+burger.addEventListener('click', () => setMenu(!links.classList.contains('on')));
+links.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+/* botão fixo depois do primeiro bloco */
+new IntersectionObserver(([e]) => $('#dock').classList.toggle('on', !e.isIntersecting)).observe($('#hero'));
+
+/* carrossel: setas, teclado e pontos que acompanham a peça visível */
+const rail = $('#rail'), slides = [...rail.children], dotsEl = $('#dots'), prevB = $('#prev'), nextB = $('#next');
+dotsEl.innerHTML = slides.map((_, i) => `<button type="button" aria-label="Ir para a peça ${i + 1}" aria-current="${i === 0}"></button>`).join('');
+const step = () => slides[0].getBoundingClientRect().width + 16;
+prevB.addEventListener('click', () => rail.scrollBy({left:-step(), behavior: reduce ? 'auto' : 'smooth'}));
+nextB.addEventListener('click', () => rail.scrollBy({left:step(), behavior: reduce ? 'auto' : 'smooth'}));
+rail.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { nextB.click(); e.preventDefault(); } if (e.key === 'ArrowLeft') { prevB.click(); e.preventDefault(); } });
+dotsEl.addEventListener('click', e => { const i = [...dotsEl.children].indexOf(e.target.closest('button')); if (i >= 0) rail.scrollTo({left: slides[i].offsetLeft - slides[0].offsetLeft, behavior: reduce ? 'auto' : 'smooth'}); });
+const seen = new Set();
+const cio = new IntersectionObserver(es => {
+  es.forEach(e => e.isIntersecting ? seen.add(slides.indexOf(e.target)) : seen.delete(slides.indexOf(e.target)));
+  if (!seen.size) return;
+  const first = Math.min(...seen);
+  [...dotsEl.children].forEach((d, i) => d.setAttribute('aria-current', i === first));
+  prevB.disabled = seen.has(0);
+  nextB.disabled = seen.has(slides.length - 1);
+}, {root: rail, threshold: .7});
+slides.forEach(s => cio.observe(s));
+
+/* ampliar peça, com pedido direto */
+const lb = $('#lb'), lbi = lb.querySelector('img');
+rail.addEventListener('click', e => {
+  const b = e.target.closest('.open'); if (!b) return;
+  const p = b.closest('.pc');
+  lbi.src = p.dataset.src; lbi.alt = p.dataset.alt;
+  /* fotos com legenda do Instagram por cima aparecem recortadas em quadrado */
+  lbi.style.aspectRatio = p.dataset.crop ? '1 / 1' : 'auto';
+  lbi.style.width = p.dataset.crop ? 'min(92vw, 68dvh)' : 'auto';
+  $('#lbT').textContent = `${p.dataset.title}. ${p.dataset.price}.`;
+  $('#lbWa').href = wa(`Olá, Elenice! Vi no site a peça "${p.dataset.title}" e quero uma assim. Pode me passar o orçamento?`);
+  lb.showModal();
+});
+$('#lbX').addEventListener('click', () => lb.close());
+lb.addEventListener('click', e => { if (e.target === lb || e.target.id === 'lbIn') lb.close(); });
+
+/* prévia do nome */
+const prev = $('#prev-name'), nm = $('#nm'), board = prev.parentElement;
+let ink = '#d0587a', t, shown = 99;
+function fit(){
+  const text = prev.textContent || 'Nome', w = board.clientWidth - 2 * parseFloat(getComputedStyle(board).paddingLeft);
+  let s = Math.min(150, w / (text.length * .34));
+  prev.style.fontSize = s + 'px';
+  while (prev.scrollWidth > w && s > 40) { s -= 4; prev.style.fontSize = s + 'px'; }
+}
+function draw(){
+  const v = nm.value.trim();
+  const txt = v || 'Seu nome';
+  /* letras novas "penetram" no tecido; as que já estavam ficam quietas */
+  prev.setAttribute('aria-label', txt);
+  prev.innerHTML = [...txt].map((c, i) => `<span aria-hidden="true"${i >= shown && v ? ' class="pop"' : ''}>${c === ' ' ? '&nbsp;' : esc(c)}</span>`).join('');
+  shown = v ? txt.length : 0;
+  prev.style.color = v ? ink : 'var(--muted)';
+  fit();
+  $('#nameSend').href = wa(`Olá, Elenice! Vim pelo site e gostaria de encomendar uma peça personalizada.\nNome: ${v || '(a definir)'}\nCor da tinta: ${document.querySelector('.ink[aria-pressed=true]').textContent.trim()}`);
+}
+nm.addEventListener('input', draw);
+document.querySelector('.inks').addEventListener('click', e => {
+  const b = e.target.closest('.ink'); if (!b) return;
+  document.querySelectorAll('.ink').forEach(x => x.setAttribute('aria-pressed', x === b));
+  ink = b.dataset.c;
+  if (!reduce) { prev.classList.add('swap'); clearTimeout(t); t = setTimeout(() => prev.classList.remove('swap'), 200); }
+  draw();
+});
+addEventListener('resize', fit); document.fonts && document.fonts.ready.then(draw);
+draw();
+
+/* títulos: palavra por palavra (o leitor de tela lê o título inteiro) */
+document.querySelectorAll('h2.rv').forEach(h => {
+  const text = h.textContent.trim(); h.setAttribute('aria-label', text);
+  h.innerHTML = text.split(' ').map((w, i) => `<span class="w" style="--w:${i}" aria-hidden="true">${esc(w)}</span>`).join(' ');
+  h.classList.add('wsplit');
+});
+
+/* revelar ao rolar, uma vez por elemento */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const el = e.target;
+  (el._reveal || el).classList.add('in');
+  if (el.classList.contains('board')) el.querySelector('output').classList.add('write');
+  io.unobserve(el);
+}), {threshold:.12});
+document.querySelectorAll('.rv, .orn').forEach(el => io.observe(el));
+
+/* carrossel: cascata na entrada e um toquinho lateral que mostra que dá para arrastar */
+slides.forEach((s, i) => s.style.setProperty('--i', i));
+let touched = false;
+['pointerdown', 'wheel', 'keydown'].forEach(ev => rail.addEventListener(ev, () => touched = true, {passive:true}));
+const nudge = (to, ms) => new Promise(res => {
+  const from = rail.scrollLeft, t0 = performance.now();
+  const tick = now => { const k = Math.min(1, (now - t0) / ms), e = 1 - Math.pow(1 - k, 3); rail.scrollLeft = from + (to - from) * e; k < 1 ? requestAnimationFrame(tick) : res(); };
+  requestAnimationFrame(tick);
+});
+const railIO = new IntersectionObserver(async ([e]) => {
+  if (!e.isIntersecting) return;
+  railIO.disconnect(); rail.classList.add('in');
+  if (reduce) return;
+  await new Promise(r => setTimeout(r, 1100));
+  if (touched || rail.scrollLeft > 4) return;
+  rail.style.scrollSnapType = 'none';
+  await nudge(64, 520); await new Promise(r => setTimeout(r, 120));
+  if (!touched) await nudge(0, 620);
+  rail.style.scrollSnapType = '';
+}, {threshold:.35});
+railIO.observe(rail);
+
+/* profundidade suave nas fotos do topo, só com mouse; pétalas pausam fora da tela */
+const hero = $('#hero'), art = hero.querySelector('.hero-art');
+new IntersectionObserver(([e]) => hero.classList.toggle('away', !e.isIntersecting)).observe(hero);
+if (!reduce && matchMedia('(hover:hover) and (pointer:fine)').matches) {
+  let tx = 0, ty = 0, cx = 0, cy = 0, raf = 0;
+  const loop = () => { cx += (tx - cx) * .08; cy += (ty - cy) * .08; art.style.setProperty('--tx', cx.toFixed(2) + 'px'); art.style.setProperty('--ty', cy.toFixed(2) + 'px'); raf = (Math.abs(tx - cx) + Math.abs(ty - cy) > .05) ? requestAnimationFrame(loop) : 0; };
+  hero.addEventListener('pointermove', e => { const r = hero.getBoundingClientRect(); tx = ((e.clientX - r.left) / r.width - .5) * 14; ty = ((e.clientY - r.top) / r.height - .5) * 10; if (!raf) raf = requestAnimationFrame(loop); }, {passive:true});
+  hero.addEventListener('pointerleave', () => { tx = 0; ty = 0; if (!raf) raf = requestAnimationFrame(loop); });
+}
+/* fotos revelam pelo contêiner: um elemento já recortado por clip-path nunca conta como visível */
+document.querySelectorAll('.unveil').forEach(el => { const host = el.parentElement; host._reveal = el; io.observe(host); });
+/* rede de segurança: nada fica escondido se o observador falhar */
+setTimeout(() => document.querySelectorAll('.unveil:not(.in), .rv:not(.in), .orn:not(.in), .rail:not(.in)').forEach(el => { const r = (el.classList.contains('unveil') ? el.parentElement : el).getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) el.classList.add('in'); }), 2500);
+</script>
+</body>
+</html>
